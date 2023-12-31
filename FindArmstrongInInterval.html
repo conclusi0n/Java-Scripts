@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Armstrong in Interval Program</title>
+</head>
+<body>
+    <h1>Find Armstrong in Interval Program</h1>
+    <script>
+        var start = 100;
+        var end = 1000;
+
+        console.log('Armstrong Numbers in the Interval:');
+        for (var i = start; i <= end; i++) {
+            var originalNumber = i;
+            var result = 0;
+            var n = String(i).length;
+
+            while (originalNumber > 0) {
+                var digit = originalNumber % 10;
+                result += Math.pow(digit, n);
+                originalNumber = Math.floor(originalNumber / 10);
+            }
+
+            if (result === i) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

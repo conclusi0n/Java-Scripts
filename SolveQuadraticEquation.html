@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Quadratic Equation Program</title>
+</head>
+<body>
+    <h1>Solve Quadratic Equation Program</h1>
+    <script>
+        var a = 1;
+        var b = -3;
+        var c = 2;
+
+        var discriminant = b * b - 4 * a * c;
+
+        if (discriminant > 0) {
+            var root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            var root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            console.log('Roots: ' + root1 + ', ' + root2);
+        } else if (discriminant == 0) {
+            var root = -b / (2 * a);
+            console.log('Root: ' + root);
+        } else {
+            console.log('No Real Roots');
+        }
+    </script>
+</body>
+</html>

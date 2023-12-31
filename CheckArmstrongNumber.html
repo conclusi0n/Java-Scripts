@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Armstrong Number Program</title>
+</head>
+<body>
+    <h1>Check Armstrong Number Program</h1>
+    <script>
+        var number = 153;
+        var originalNumber = number;
+        var result = 0;
+        var n = String(number).length;
+
+        while (originalNumber > 0) {
+            var digit = originalNumber % 10;
+            result += Math.pow(digit, n);
+            originalNumber = Math.floor(originalNumber / 10);
+        }
+
+        if (result === number) {
+            console.log('Armstrong Number');
+        } else {
+            console.log('Not an Armstrong Number');
+        }
+    </script>
+</body>
+</html>
